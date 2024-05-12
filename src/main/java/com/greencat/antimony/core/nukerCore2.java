@@ -159,7 +159,7 @@ public class nukerCore2 {
                     if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
 
                         Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                        Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+                        Vec3 blockVec = new Vec3(blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5);
 
                         MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
@@ -207,7 +207,7 @@ public class nukerCore2 {
 
                     if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
                         Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                        Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+                        Vec3 blockVec = new Vec3(blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5);
 
                         MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
@@ -275,7 +275,7 @@ public class nukerCore2 {
                         if (blockState.getBlock() == b) {
 
                             Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                            Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+                            Vec3 blockVec = new Vec3(blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5);
 
                             MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
@@ -326,7 +326,7 @@ public class nukerCore2 {
                     if (blockState.getBlock() == b) {
                         if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
                             Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                            Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+                            Vec3 blockVec = new Vec3(blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5);
 
                             MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
@@ -391,7 +391,7 @@ public class nukerCore2 {
                     if (blockState.getBlock() == b) {
                         if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
                             Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                            Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+                            Vec3 blockVec = new Vec3(blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5);
 
                             MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
