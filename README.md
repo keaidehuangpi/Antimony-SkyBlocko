@@ -16,7 +16,6 @@ CurseForge: https://www.curseforge.com/minecraft/mc-mods/antimony-skyblock
 - Custom Pet Name
 - Custom Item Sound
 - Antimony Mod Channel
-- Killaura
 - Reach
 - AutoUse  
 ## 鸣谢
