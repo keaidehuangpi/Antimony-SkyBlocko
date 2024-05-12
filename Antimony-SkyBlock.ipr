@@ -118,6 +118,9 @@
   <component name="SvnBranchConfigurationManager">
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
   <component name="libraryTable">
     <library name="Gradle: com.alibaba:fastjson:1.2.83" type="java-imported" external-system-id="GRADLE">
       <properties groupId="com.alibaba" artifactId="fastjson" version="1.2.83" />

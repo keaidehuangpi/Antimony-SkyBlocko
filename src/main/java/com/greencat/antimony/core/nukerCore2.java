@@ -160,7 +160,7 @@ public class nukerCore2 {
 
                     MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
-                    if (rayTrace != null && rayTrace.getBlockPos().equals(pos)) {
+                    if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
                         continue;
                     }
 
