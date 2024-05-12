@@ -163,7 +163,7 @@ public class nukerCore2 {
 
                         MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
-                        if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                        if (rayTrace == null || !rayTrace.getBlockPos().equals(blockPos)) {
                             continue;
                         }
                         if (miningType == MiningType.NORMAL) {
@@ -211,7 +211,7 @@ public class nukerCore2 {
 
                         MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
-                        if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                        if (rayTrace == null || !rayTrace.getBlockPos().equals(blockPos)) {
                             continue;
                         }
                         if (miningType == MiningType.NORMAL) {
@@ -279,7 +279,7 @@ public class nukerCore2 {
 
                             MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
-                            if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                            if (rayTrace == null || !rayTrace.getBlockPos().equals(blockPos)) {
                                 continue;
                             }
                             if (miningType == MiningType.NORMAL) {
@@ -330,7 +330,7 @@ public class nukerCore2 {
 
                             MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
-                            if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                            if (rayTrace == null || !rayTrace.getBlockPos().equals(blockPos)) {
                                 continue;
                             }
                             if (titanium && b == Blocks.stone) {
@@ -395,7 +395,7 @@ public class nukerCore2 {
 
                             MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
 
-                            if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                            if (rayTrace == null || !rayTrace.getBlockPos().equals(blockPos)) {
                                 continue;
                             }
                             if (titanium && b == Blocks.stone) {
