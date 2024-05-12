@@ -1,0 +1,10 @@
+/build/
+/out/production/Antimony-SkyBlock/
+/.gradle/minecraft/
+/run/
+
+# 默认忽略的文件
+/Antimony-SkyBlock.iws
+
+# 项目排除路径
+/.gradle/
