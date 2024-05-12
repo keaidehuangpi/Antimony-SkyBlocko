@@ -155,16 +155,17 @@ public class nukerCore2 {
                 IBlockState blockState = Minecraft.getMinecraft().theWorld.getBlockState(blockPos);
                 if (blockState.getBlock() == block) {
 
-                    Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                    Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
-
-                    MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
-
-                    if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
-                        continue;
-                    }
 
                     if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
+
+                        Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
+                        Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+
+                        MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
+
+                        if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                            continue;
+                        }
                         if (miningType == MiningType.NORMAL) {
                             chests.add(new Vec3(blockPos.getX() + 0.5, blockPos.getY(), blockPos.getZ() + 0.5));
                         } else {
@@ -203,15 +204,16 @@ public class nukerCore2 {
             for (BlockPos blockPos : BlockPos.getAllInBox(playerPos.add(vec3i), playerPos.subtract(vec3i))) {
                 IBlockState blockState = Minecraft.getMinecraft().theWorld.getBlockState(blockPos);
                 if (isValidCrop(blockState)) {
-                    Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                    Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
-                    MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
-
-                    if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
-                        continue;
-                    }
                     if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
+                        Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
+                        Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+
+                        MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
+
+                        if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                            continue;
+                        }
                         if (miningType == MiningType.NORMAL) {
                             chests.add(new Vec3(blockPos.getX() + 0.5, blockPos.getY(), blockPos.getZ() + 0.5));
                         } else {
@@ -267,17 +269,19 @@ public class nukerCore2 {
         if (playerPos != null) {
             for (BlockPos blockPos : BlockPos.getAllInBox(playerPos.add(vec3i), playerPos.subtract(vec3i))) {
                 IBlockState blockState = Minecraft.getMinecraft().theWorld.getBlockState(blockPos);
-                Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
-                MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
-
-                if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
-                    continue;
-                }
                 for(Block b : block) {
                     if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
                         if (blockState.getBlock() == b) {
+
+                            Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
+                            Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+
+                            MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
+
+                            if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                                continue;
+                            }
                             if (miningType == MiningType.NORMAL) {
                                 chests.add(new Vec3(blockPos.getX() + 0.5, blockPos.getY(), blockPos.getZ() + 0.5));
                             } else {
@@ -316,17 +320,19 @@ public class nukerCore2 {
         if (playerPos != null) {
             for (BlockPos blockPos : BlockPos.getAllInBox(playerPos.add(vec3i), playerPos.subtract(vec3i))) {
                 IBlockState blockState = Minecraft.getMinecraft().theWorld.getBlockState(blockPos);
-                Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
-                MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
-
-                if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
-                    continue;
-                }
                 for(Block b : block) {
+
                     if (blockState.getBlock() == b) {
                         if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
+                            Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
+                            Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+
+                            MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
+
+                            if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                                continue;
+                            }
                             if (titanium && b == Blocks.stone) {
                                 int meta = blockState.getValue(BlockStone.VARIANT).getMetadata();
                                 if (meta == 4) {
@@ -380,17 +386,18 @@ public class nukerCore2 {
         if (playerPos != null) {
             for (BlockPos blockPos : BlockPos.getAllInBox(playerPos.add(vec3i), playerPos.subtract(vec3i))) {
                 IBlockState blockState = Minecraft.getMinecraft().theWorld.getBlockState(blockPos);
-                Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
-                Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
-                MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
-
-                if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
-                    continue;
-                }
                 for(Block b : block) {
                     if (blockState.getBlock() == b) {
                         if(blockPos.getY() >= Minecraft.getMinecraft().thePlayer.posY || !ignoreGround) {
+                            Vec3 eyesPos = new Vec3(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.getEntityBoundingBox().minY + Minecraft.getMinecraft().thePlayer.eyeHeight, Minecraft.getMinecraft().thePlayer.posZ);
+                            Vec3 blockVec = new Vec3(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+
+                            MovingObjectPosition rayTrace = Minecraft.getMinecraft().theWorld.rayTraceBlocks(eyesPos, blockVec, false, true, false);
+
+                            if (rayTrace == null || !rayTrace.getBlockPos().equals(pos)) {
+                                continue;
+                            }
                             if (titanium && b == Blocks.stone) {
                                 int meta = blockState.getValue(BlockStone.VARIANT).getMetadata();
                                 if (meta == 4) {
